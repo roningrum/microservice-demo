@@ -1,16 +1,18 @@
 package id.bni297.microservicedemo.model;
 
+import jakarta.persistence.*;
 
-
-import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Long id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "price")
     private Double price;
 
     public Product(){}
